@@ -1,0 +1,48 @@
+// ! ======================================== тултипы ========================================
+
+.tooltip {
+  max-width: 200px;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 7px);
+  padding: 7px 15px;
+  width: max-content;
+  font-family: $font-Bold;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #333333;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+  // .tooltip__content::after
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: #333333 transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+
+  // .tooltip-visible
+  &-visible {
+    opacity: 1;
+    visibility: visible;
+
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

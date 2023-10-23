@@ -1,0 +1,105 @@
+@keyframes spinner {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+// спиннер для изменяемого попапа (удалена тень)
+.spinner-change-popup {
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+
+.spinner div,
+.spinner-change-popup div {
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  border: 6px solid #9873ff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spinner 2.5s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+
+  @media (max-width: 1024px) {
+    width: 85px;
+    height: 85px;
+    border: 5px solid #9873ff;
+    border-top-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    width: 55px;
+    height: 55px;
+    border: 4px solid #9873ff;
+    border-top-color: transparent;
+  }
+
+  @media (max-width: 576px) {
+    width: 35px;
+    height: 35px;
+    border: 3px solid #9873ff;
+    border-top-color: transparent;
+  }
+}
+
+// спиннеры кнопок
+@keyframes spinner-save-btn {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.spinner-save-btn {
+  display: none;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+
+.spinner-save-btn span {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #B89EFF;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spinner 2.5s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+}

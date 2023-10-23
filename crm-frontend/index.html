@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CRM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer src="https://unpkg.com/tippy.js@6"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/inputmask@5/dist/inputmask.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+
+    <section class="header">
+        <div class="header-logo">crm</div>
+
+        <div class="header__form">
+            <input id="header-search" class="header__form-input" placeholder="Введите запрос">
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container" id="container">
+            <h1 class="title">Клиенты</h1>
+
+            <div class="spinner">
+                <div></div>
+            </div>
+
+            <table class="workers-table">
+                <thead class="workers-table__row">
+                    <tr>
+                        <th class="workers-table__id" data-column="id">ID</th>
+                        <th class="workers-table__fio" data-column="fio">
+                            Фамилия Имя Отчество
+                            <span style="white-space: nowrap;">А-Я</span>
+                        </th>
+                        <th class="workers-table__create-date" data-column="createdAt">Дата и время создания</th>
+                        <th class="workers-table__last-changes" data-column="updatedAt">Последние изменения</th>
+                        <th class="workers-table__contacts" data-column="contacts">Контакты</th>
+                        <th class="workers-table__actions" data-column="actions">Действия</th>
+                    </tr>
+                </thead>
+
+                <tbody class="workers-table__list" id="workers__list"></tbody>
+            </table>
+
+        </div>
+    </section>
+    
+</body>
+
+</html>
